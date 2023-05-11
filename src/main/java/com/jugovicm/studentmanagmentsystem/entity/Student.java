@@ -2,8 +2,6 @@ package com.jugovicm.studentmanagmentsystem.entity;
 
 import jakarta.persistence.*;
 
-
-
 @Entity
 @Table(name="students")
 public class Student {

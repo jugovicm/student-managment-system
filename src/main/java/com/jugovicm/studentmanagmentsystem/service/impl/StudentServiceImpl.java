@@ -10,6 +10,7 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
     private StudentRepository studentRepository;
 
+    //only one constructor in Bean -> no @AutoWierd annotation
     public StudentServiceImpl(StudentRepository studentRepository) {
         super();
         this.studentRepository = studentRepository;
@@ -19,4 +20,10 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAllStudents() {
         return studentRepository.findAll ();
     }
+
+    @Override
+    public Student saveStudent(Student student) {
+       return studentRepository.save ( student );
+    }
+
 }
