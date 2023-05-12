@@ -20,8 +20,8 @@
         </div>
     </nav>
     <div class = "container">
-        <div class ="row">
-            <h1> List Students </h1>
+         <div class ="row">
+           <h1>List of students</h1>
         </div>
     </div>
         <div class = "row">
@@ -44,6 +44,7 @@
                 <td th:text = "${student.email}"></td>
                 <td>
                     <a th:href="@{/students/edit/{id}(id=${student.id})}" class = "btn btn-primary"> Update </a>
+                    <a th:href="@{/students/{id}(id=${student.id})}" class = "btn btn-danger"> Delete </a>
                 </td>
             </tr>
             </tbody>
